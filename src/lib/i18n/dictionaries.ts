@@ -135,6 +135,7 @@ export const dictionaries = {
         "Narrative and figurative works exploring memory, place, and the human figure — from diploma pieces to exhibition paintings.",
       quote:
         "The work is a reflection on my childhood. My father always wore military uniform. We lived in a military settlement where you would see an old well and several Soviet-era Khrushchev apartment buildings. I wanted to convey the sensations and memories I experienced as a child: first snow, my Father, the Ural Mountains, and the cold.",
+      diplomaHeading: "Alina's diploma work: Triptych “Dedication to Father”.",
       works: {
         Together: "Together",
         "First Snow": "First Snow",
@@ -264,7 +265,7 @@ export const dictionaries = {
     testimonials: [
       {
         quote:
-          "Когда видишь искусство Алины вживую, ощущаешь, что в нём Божий дар. Её картины дышат, захватывая дыхание.",
+          "Когда видишь картины Алины в живую в первый раз, дух захватывает. Сначала чувствуешь неописуемый восторг, а позднее, когда произведение уходит с тобой домой, рождается тихая любовь к нему.",
         attribution: "Частный заказчик",
       },
       {
@@ -349,18 +350,19 @@ export const dictionaries = {
         "Фигуративные и академические работы — от дипломных картин до выставочных полотен, исследующие память, место и человеческую фигуру.",
       quote:
         "Работа — это воспоминание о моём детстве. Отец всегда носил военную форму. Жили мы в военном городке, где рядом можно встретить и старый колодец, и несколько советских хрущёвок. Хотелось передать те мои ощущения из детства: первый снег, Отец, Урал и холод.",
+      diplomaHeading: "Дипломная работа Алины: Триптих «Посвящение Отцу».",
       works: {
-        Together: "Вместе",
+        Together: "Двое",
         "First Snow": "Первый снег",
         Father: "Отец",
       },
-      studiesTitle: "Этюды",
-      studiesIntro: "Академические этюды и копии с мастеров.",
+      studiesTitle: "Штудии, постановки, копии работ великих мастеров",
+      studiesIntro: "",
       studyWorks: {
-        "Two Nudes": "Две обнажённые",
+        "Two Nudes": "Двойная Обнаженная",
         "Modern Life": "Современная жизнь",
-        "Master Copy": "Копия с мастера",
-        "Rembrandt Master Copy": "Копия с Рембрандта",
+        "Master Copy": "Копия",
+        "Rembrandt Master Copy": "Копия Рембрандта",
       },
     },
     stillLife: {

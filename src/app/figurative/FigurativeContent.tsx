@@ -56,6 +56,9 @@ export function FigurativeContent() {
         </header>
 
         <section className="mb-16 md:mb-20">
+          <h2 className="mb-6 text-[0.82rem] font-semibold tracking-[0.2em] text-[var(--ink)] uppercase md:mb-8">
+            {t.academic.diplomaHeading}
+          </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {gallery.works.map((work) => (
               <GalleryWorkCard
@@ -75,9 +78,11 @@ export function FigurativeContent() {
           <h2 className="mb-6 text-[0.82rem] font-semibold tracking-[0.2em] text-[var(--ink)] uppercase md:mb-8">
             {t.academic.studiesTitle}
           </h2>
-          <p className="mb-8 max-w-2xl text-[1rem] leading-8 text-[var(--ink-muted)]">
-            {t.academic.studiesIntro}
-          </p>
+          {t.academic.studiesIntro ? (
+            <p className="mb-8 max-w-2xl text-[1rem] leading-8 text-[var(--ink-muted)]">
+              {t.academic.studiesIntro}
+            </p>
+          ) : null}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {studiesSection.works.map((work) => (
               <GalleryWorkCard
