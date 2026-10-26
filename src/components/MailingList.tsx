@@ -1,8 +1,10 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { useLanguage } from "./LanguageProvider";
 
 export function MailingList() {
+  const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
 
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -17,12 +19,12 @@ export function MailingList() {
           <span aria-hidden="true" className="text-base">
             ✉
           </span>
-          Join the mailing list
+          {t.ui.mailingTitle}
         </h2>
 
         {submitted ? (
           <p className="text-center text-sm tracking-wide text-[var(--ink-muted)] md:text-left">
-            Thank you — you are on the list.
+            {t.ui.mailingThanks}
           </p>
         ) : (
           <form
@@ -30,31 +32,31 @@ export function MailingList() {
             className="flex flex-col gap-3 md:flex-row md:items-stretch"
           >
             <label className="sr-only" htmlFor="mailing-name">
-              Name
+              {t.ui.mailingName}
             </label>
             <input
               id="mailing-name"
               name="name"
               type="text"
-              placeholder="Name"
+              placeholder={t.ui.mailingName}
               className="min-h-12 flex-1 border border-[var(--ink)]/15 bg-white/50 px-4 text-[0.92rem] text-[var(--ink)] outline-none placeholder:text-[var(--ink-soft)]"
             />
             <label className="sr-only" htmlFor="mailing-email">
-              Email address
+              {t.ui.mailingEmail}
             </label>
             <input
               id="mailing-email"
               name="email"
               type="email"
               required
-              placeholder="Email address"
+              placeholder={t.ui.mailingEmail}
               className="min-h-12 flex-1 border border-[var(--ink)]/15 bg-white/50 px-4 text-[0.92rem] text-[var(--ink)] outline-none placeholder:text-[var(--ink-soft)]"
             />
             <button
               type="submit"
               className="min-h-12 bg-[var(--charcoal)] px-8 text-[0.72rem] font-semibold tracking-[0.18em] text-white uppercase transition-opacity hover:opacity-85"
             >
-              Sign Up
+              {t.ui.mailingSubmit}
             </button>
           </form>
         )}

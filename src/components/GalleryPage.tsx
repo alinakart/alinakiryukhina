@@ -1,4 +1,7 @@
+"use client";
+
 import { galleries, type GallerySlug } from "@/lib/content";
+import { useLanguage } from "./LanguageProvider";
 import { GalleryWorkCard } from "./GalleryWorkCard";
 
 type GalleryPageProps = {
@@ -21,33 +24,46 @@ function workLayout(work: { layout?: string }): "portrait" | "landscape" {
 
 export function GalleryPage({ slug }: GalleryPageProps) {
   const gallery = galleries[slug];
+  const { t } = useLanguage();
+  const isPortraits = slug === "portraits";
+  const copy = isPortraits ? t.portraits : t.stillLife;
+  const workTitles = isPortraits ? t.portraits.works : t.stillLife.works;
 
   return (
-    <main className="bg-[var(--charcoal)] pt-28 pb-20 text-white md:pt-32">
+    <main
+      className={`pt-28 pb-20 md:pt-32 ${
+        isPortraits
+          ? "bg-[var(--charcoal)] text-white"
+          : "bg-[var(--sage)] text-[var(--ink)]"
+      }`}
+    >
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <header className="mb-12 max-w-2xl md:mb-16">
           <h1 className="mb-4 text-[0.88rem] font-semibold tracking-[0.22em] uppercase">
-            {gallery.title}
+            {copy.title}
           </h1>
-          <p className="text-[1rem] leading-8 text-white/75">
-            {gallery.intro}
+          <p
+            className={`text-[1rem] leading-8 ${
+              isPortraits ? "text-white/75" : "text-[var(--ink-muted)]"
+            }`}
+          >
+            {copy.intro}
           </p>
-          {"quote" in gallery && gallery.quote ? (
-            <p className="mt-6 text-[1rem] leading-8 text-white/75">
-              “{gallery.quote}”
-            </p>
-          ) : null}
         </header>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {gallery.works.map((work) => (
-            <GalleryWorkCard
-              key={work.title}
-              title={work.title}
-              images={workImages(work as { src?: string; images?: readonly string[] })}
-              layout={workLayout(work as { layout?: string })}
-            />
-          ))}
+          {gallery.works.map((work) => {
+            const translated =
+              workTitles[work.title as keyof typeof workTitles] ?? work.title;
+            return (
+              <GalleryWorkCard
+                key={work.title}
+                title={translated}
+                images={workImages(work)}
+                layout={workLayout(work as { layout?: string })}
+              />
+            );
+          })}
         </div>
       </div>
     </main>

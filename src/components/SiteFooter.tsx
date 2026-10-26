@@ -1,7 +1,14 @@
+"use client";
+
 import Link from "next/link";
-import { navLinks, site } from "@/lib/content";
+import { site } from "@/lib/content";
+import { getNavLinks } from "@/lib/i18n/nav";
+import { useLanguage } from "./LanguageProvider";
 
 export function SiteFooter() {
+  const { t } = useLanguage();
+  const navLinks = getNavLinks(t);
+
   return (
     <footer className="bg-[var(--charcoal)] px-6 pb-8 text-white md:px-10">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 border-t border-white/10 pt-12 md:flex-row md:justify-between">
@@ -32,7 +39,7 @@ export function SiteFooter() {
 
         <div className="md:text-right">
           <p className="font-signature text-[2.4rem] leading-none md:text-[2.8rem]">
-            {site.name}
+            Alina Kiryukhina
           </p>
           <a
             href={`mailto:${site.email}`}
@@ -50,7 +57,7 @@ export function SiteFooter() {
       </div>
 
       <div className="mx-auto mt-12 flex max-w-6xl flex-col gap-3 border-t border-white/10 pt-6 text-[0.68rem] text-white/65 md:flex-row md:justify-between">
-        <p>privacy policy</p>
+        <p>{t.ui.privacy}</p>
         <p>© 2026 {site.name}</p>
       </div>
     </footer>

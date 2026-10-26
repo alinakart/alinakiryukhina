@@ -148,8 +148,8 @@ export const academArtFeature = {
 export const aboutTheWork = {
   heading: "About The Work",
   paragraphs: [
-    "Having a portrait painted is a collaborative process between sitter and artist.",
-    "The finished work becomes a lasting record of that encounter — something with a life of its own, and a focal point for years to come.",
+    "Having a portrait painted is a collaborative process\nbetween sitter and artist.",
+    "The finished work becomes a lasting record of that encounter —\nsomething with a life of its own,\nand a focal point for years to come.",
   ],
   href: "/about-the-work",
   image: "/artwork/site/process/about-the-work-banner-3.jpg",
@@ -243,7 +243,7 @@ export const aboutAlina = {
 export const testimonials = [
   {
     quote:
-      "Alina’s portraits hold a rare stillness — they feel observed, not staged, and the colour is always exacting.",
+      "When you see Alina’s art in person, you feel like it channels God’s gift. Her paintings breathe, taking your breath away.",
     attribution: "Private commission client",
   },
   {

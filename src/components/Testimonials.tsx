@@ -1,17 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { testimonials } from "@/lib/content";
+import { useLanguage } from "./LanguageProvider";
 
 export function Testimonials() {
+  const { t } = useLanguage();
   const [index, setIndex] = useState(0);
-  const item = testimonials[index];
+  const item = t.testimonials[index] ?? t.testimonials[0];
 
   const go = (direction: -1 | 1) => {
     setIndex((current) => {
       const next = current + direction;
-      if (next < 0) return testimonials.length - 1;
-      if (next >= testimonials.length) return 0;
+      if (next < 0) return t.testimonials.length - 1;
+      if (next >= t.testimonials.length) return 0;
       return next;
     });
   };
@@ -33,7 +34,7 @@ export function Testimonials() {
           className="animate-fade-in flex-1 text-center"
         >
           <p className="text-[1.02rem] leading-8 text-white/85 md:text-[1.12rem] md:leading-9">
-            {item.quote}
+            “{item.quote}”
           </p>
           <footer className="mt-6 text-[0.78rem] tracking-[0.04em] text-white/55">
             {item.attribution}

@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import { instagramShots, site } from "@/lib/content";
+import { useLanguage } from "./LanguageProvider";
 
 export function InstagramStrip() {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-[var(--charcoal)] px-0 pb-14 pt-4">
       <div className="grid grid-cols-3 gap-1 sm:grid-cols-6">
@@ -30,7 +35,7 @@ export function InstagramStrip() {
           rel="noopener noreferrer"
           className="border border-white/35 px-7 py-3 text-[0.72rem] font-medium tracking-[0.16em] text-white uppercase transition-opacity hover:opacity-85"
         >
-          Follow on Instagram
+          {t.ui.followInstagram}
         </a>
       </div>
     </section>
