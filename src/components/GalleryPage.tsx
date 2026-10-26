@@ -23,17 +23,17 @@ export function GalleryPage({ slug }: GalleryPageProps) {
   const gallery = galleries[slug];
 
   return (
-    <main className="bg-[var(--sage)] pt-28 pb-20 md:pt-32">
+    <main className="bg-[var(--charcoal)] pt-28 pb-20 text-white md:pt-32">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <header className="mb-12 max-w-2xl md:mb-16">
-          <h1 className="mb-4 text-[0.88rem] font-semibold tracking-[0.22em] text-[var(--ink)] uppercase">
+          <h1 className="mb-4 text-[0.88rem] font-semibold tracking-[0.22em] uppercase">
             {gallery.title}
           </h1>
-          <p className="text-[1rem] leading-8 text-[var(--ink-muted)]">
+          <p className="text-[1rem] leading-8 text-white/75">
             {gallery.intro}
           </p>
           {"quote" in gallery && gallery.quote ? (
-            <p className="mt-6 text-[1rem] leading-8 text-[var(--ink-muted)]">
+            <p className="mt-6 text-[1rem] leading-8 text-white/75">
               “{gallery.quote}”
             </p>
           ) : null}

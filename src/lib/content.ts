@@ -12,9 +12,11 @@ export const site = {
 
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/portraits", label: "Portrait Painting" },
-  { href: "/studies", label: "Still Life and Studies" },
   { href: "/about", label: "About Alina" },
+  { href: "/figurative", label: "Academic Training" },
+  { href: "/portraits", label: "Commissioned Portraits" },
+  { href: "/studies", label: "Still Life" },
+  { href: "/about-the-work", label: "About the Work" },
   { href: "/feature", label: "Feature" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -51,19 +53,19 @@ export const heroSlides: {
 export const categories = [
   {
     href: "/portraits",
-    label: "Portrait Painting",
+    label: "Commissioned Portraits",
     src: "/artwork/site/portraits/mc-portrait.jpg",
     alt: "Seated portrait painting",
   },
   {
     href: "/figurative",
-    label: "Figurative Painting",
+    label: "Academic Training",
     src: "/artwork/site/figurative/dad-artwork.jpg",
     alt: "Figurative painting sample",
   },
   {
     href: "/studies",
-    label: "Still Life and Studies",
+    label: "Still Life",
     src: "/artwork/site/studies/still-life-1.jpg",
     alt: "Still life study sample",
   },
@@ -118,28 +120,30 @@ export const featureLinks = [
       },
     ],
   },
-  {
-    domain: "academart.com",
-    title: "Kiryukhina A",
-    titleEn: "4th year study, Repin Academy — AcademArt",
-    excerpt:
-      "Academy studies from Alina’s fourth year at the I.E. Repin Institute, presented on AcademArt.",
-    slides: [
-      {
-        href: "https://academart.com/works/kiryukhina-a?from=%2Facademy%2F3520",
-        image: "/artwork/site/figurative/academart-figure-drawing.jpg",
-        imageAlt: "Academy figure drawing by Alina Kiryukhina on AcademArt",
-        objectPosition: "center 28%",
-      },
-      {
-        href: "https://academart.com/works/kiryukhina-a-4?from=%2Facademy%2F3520",
-        image: "/artwork/site/figurative/academart-green-portrait.jpg",
-        imageAlt: "Portrait of a girl on a green background by Alina Kiryukhina on AcademArt",
-        objectPosition: "center top",
-      },
-    ],
-  },
 ] as const;
+
+export const academArtFeature = {
+  domain: "academart.com",
+  title: "Kiryukhina A",
+  titleEn: "4th year study, Repin Academy — AcademArt",
+  excerpt:
+    "Academy studies from Alina’s fourth year at the I.E. Repin Institute, presented on AcademArt.",
+  slides: [
+    {
+      href: "https://academart.com/works/kiryukhina-a?from=%2Facademy%2F3520",
+      image: "/artwork/site/figurative/academart-figure-drawing.jpg",
+      imageAlt: "Academy figure drawing by Alina Kiryukhina on AcademArt",
+      objectPosition: "center 28%",
+    },
+    {
+      href: "https://academart.com/works/kiryukhina-a-4?from=%2Facademy%2F3520",
+      image: "/artwork/site/figurative/academart-green-portrait.jpg",
+      imageAlt:
+        "Portrait of a girl on a green background by Alina Kiryukhina on AcademArt",
+      objectPosition: "center top",
+    },
+  ],
+} as const;
 
 export const aboutTheWork = {
   heading: "About The Work",
@@ -155,8 +159,9 @@ export const aboutAlina = {
   heading: "About Alina",
   lead: "Alina Kiryukhina is a fine artist and painter based in Saint Petersburg, Russia.",
   paragraphs: [
-    "She trained at the I.D. Shadr Sverdlovsk Art College in Yekaterinburg (Fine Artist, Painting; Teacher, 2016) and at the I.E. Repin Saint Petersburg Academy of Arts (Fine Artist, Easel Painting, 2022).",
-    "Her practice spans commissioned portraits, figurative painting, academic studies, and still life. She has also taught private students ages 4–18 and adults, instructed at Global Art Studio, and contributed decorative painting for Orthodox churches, including the Church of the Icon of the Mother of God “The All-Tsaritsa” in Krasnodar.",
+    "She trained at the I.D. Shadr Sverdlovsk Art College in Yekaterinburg, Russia (Fine Artist, Painting; Teacher, 2016) and at the I.E. Repin Saint Petersburg Academy of Arts, Russia (Fine Artist, Easel Painting, 2022).",
+    "Her practice spans commissioned portraits, figurative painting, academic studies, and still life. She also teaches private students aged 8–40 and instructs at Global Art Studio.",
+    "Alina created decorative painting for Orthodox churches, including the Church of the Icon of the Mother of God “The All-Tsaritsa” in Krasnodar, Russia.",
   ],
   education: [
     {
@@ -255,12 +260,12 @@ export const testimonials = [
 
 export const galleries = {
   portraits: {
-    title: "Portrait Painting",
+    title: "Commissioned Portraits",
     intro:
       "Commissioned and studio portraits painted from life and reference, with attention to likeness, colour, and quiet presence.",
     works: [
       {
-        title: "Seated Portrait",
+        title: "Natalia",
         images: [
           "/artwork/site/portraits/mc-portrait.jpg",
           "/artwork/site/portraits/mc-posing.jpg",
@@ -269,14 +274,16 @@ export const galleries = {
         ],
       },
       {
-        title: "Horseman",
+        title: "Mehmet",
         images: [
-          "/artwork/site/portraits/mehmet-sultan.jpg",
+          "/artwork/site/portraits/mehmet-with-portrait.jpg",
           "/artwork/site/portraits/mehmet-in-progress.jpg",
+          "/artwork/site/portraits/mehmet-conqueror.jpg",
+          "/artwork/site/portraits/mehmet-sees-portrait.mp4",
         ],
       },
       {
-        title: "Nastya",
+        title: "Anastasia",
         images: [
           "/artwork/site/portraits/nastya-portrait-2.jpg",
           "/artwork/site/portraits/nastya-portrait.jpg",
@@ -293,40 +300,57 @@ export const galleries = {
           "/artwork/site/portraits/mini-6-wide.jpg",
         ],
       },
-      { title: "Academy Artwork 3", src: "/artwork/site/portraits/academy-3.jpg" },
       {
-        title: "Family Portrait",
+        title: "Alexander's Mother",
         images: [
           "/artwork/site/portraits/sasha-mom.jpg",
           "/artwork/site/portraits/sasha-mom-photo.jpg",
         ],
       },
       {
-        title: "Anton",
+        title: "Anton and his Father",
         images: [
           "/artwork/site/portraits/anton-artwork.jpg",
           "/artwork/site/portraits/anton-photo.jpg",
         ],
       },
+      {
+        title: "Natalya",
+        images: [
+          "/artwork/site/portraits/img-0526.jpg",
+          "/artwork/site/portraits/img-0528.jpg",
+          "/artwork/site/portraits/blue-dress-sketch.jpg",
+        ],
+      },
+      {
+        title: "Denis",
+        images: [
+          "/artwork/site/portraits/pirog-with-portrait.jpg",
+          "/artwork/site/portraits/pirog-with-alina.jpg",
+          "/artwork/site/portraits/pirog-photo.jpg",
+        ],
+      },
+      {
+        title: "Mehmet and his daughter Melisa",
+        images: [
+          "/artwork/site/portraits/mehmet-melisa-portrait.jpg",
+          "/artwork/site/portraits/mehmet-melisa-with-sitter.jpg",
+          "/artwork/site/portraits/mehmet-melisa-studio.jpg",
+          "/artwork/site/portraits/mehmet-melisa-framing.jpg",
+          "/artwork/site/portraits/mehmet-melisa-photo.jpg",
+        ],
+      },
     ],
   },
   figurative: {
-    title: "Figurative Painting",
+    title: "Academic Training",
     intro:
       "Narrative and figurative works exploring memory, place, and the human figure — from diploma pieces to exhibition paintings.",
     quote:
       "The work is a reflection on my childhood. My father always wore military uniform. We lived in a military settlement where you would see an old well and several Soviet-era Khrushchev apartment buildings. I wanted to convey the sensations and memories I experienced as a child: first snow, my Father, the Ural Mountains, and the cold.",
     works: [
       {
-        title: "Father",
-        images: [
-          "/artwork/site/figurative/dad-artwork.jpg",
-          "/artwork/site/figurative/father-exhibited.jpg",
-          "/artwork/site/figurative/father-with-alina-3.jpg",
-        ],
-      },
-      {
-        title: "On the Bridge",
+        title: "Together",
         images: [
           "/artwork/site/figurative/bridge-with-alina.jpg",
           "/artwork/site/figurative/railway-figures-2.jpg",
@@ -335,12 +359,23 @@ export const galleries = {
           "/artwork/site/figurative/bridge-wrapped.jpg",
         ],
       },
+      {
+        title: "First Snow",
+        src: "/artwork/site/figurative/alina-academy-art.jpg",
+      },
+      {
+        title: "Father",
+        images: [
+          "/artwork/site/figurative/dad-artwork.jpg",
+          "/artwork/site/figurative/father-exhibited.jpg",
+          "/artwork/site/figurative/father-with-alina-3.jpg",
+        ],
+      },
     ],
   },
   studies: {
-    title: "Still Life and Studies",
-    intro:
-      "Still-life paintings and figure studies from Alina’s studio practice.",
+    title: "Still Life",
+    intro: "Still-life paintings from Alina’s studio practice.",
     works: [
       { title: "Still Life I", src: "/artwork/site/studies/still-life-1.jpg" },
       { title: "Still Life II", src: "/artwork/site/studies/still-life-2.jpg" },
@@ -369,16 +404,16 @@ export const studiesSection = {
   intro: "Academic studies and master copies.",
   works: [
     {
-      title: "Two Figures",
+      title: "Two Nudes",
       src: "/artwork/site/studies/two-figures.jpg",
     },
     {
-      title: "Academy Artwork 3",
+      title: "Modern Life",
       src: "/artwork/site/portraits/academy-3.jpg",
     },
     { title: "Master Copy", src: "/artwork/site/studies/master-copy.jpg" },
     {
-      title: "Rembrandt Study",
+      title: "Rembrandt Master Copy",
       images: [
         "/artwork/site/studies/rembrandt-copy.jpg",
         "/artwork/site/studies/rembrandt-close-up.jpg",

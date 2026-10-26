@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { SiteNav } from "./SiteNav";
 
 type SiteHeaderProps = {
-  tone?: "light" | "dark";
+  tone?: "light" | "dark" | "charcoal";
 };
 
 export function SiteHeader({ tone = "light" }: SiteHeaderProps) {
@@ -20,13 +20,18 @@ export function SiteHeader({ tone = "light" }: SiteHeaderProps) {
   }, []);
 
   const onHero = tone === "light" && !scrolled;
-  const ink = onHero ? "text-white" : "text-[var(--ink)]";
+  const darkChrome = tone === "light" || tone === "charcoal";
+  const ink = darkChrome ? "text-white" : "text-[var(--ink)]";
 
   return (
     <>
       <header
         className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
-          onHero ? "bg-transparent" : "bg-[var(--sage)]/95 backdrop-blur-sm"
+          onHero
+            ? "bg-transparent"
+            : darkChrome
+              ? "bg-[var(--charcoal)]/95 backdrop-blur-sm"
+              : "bg-[var(--sage)]/95 backdrop-blur-sm"
         }`}
       >
         <div className="flex items-center justify-between px-5 py-5 md:px-8 md:py-6">

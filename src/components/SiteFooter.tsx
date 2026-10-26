@@ -3,7 +3,7 @@ import { navLinks, site } from "@/lib/content";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[var(--slate)] px-6 pb-8 text-white md:px-10">
+    <footer className="bg-[var(--charcoal)] px-6 pb-8 text-white md:px-10">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 border-t border-white/10 pt-12 md:flex-row md:justify-between">
         <div className="max-w-xl">
           <nav className="flex flex-wrap gap-x-6 gap-y-3 text-[0.7rem] tracking-[0.16em] uppercase">

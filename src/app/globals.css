@@ -1,24 +1,44 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Great Vibes";
+  src: url("/fonts/GreatVibes-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --background: #cfd6cb;
   --foreground: #2a2f33;
   --sage: #cfd6cb;
   --sage-deep: #b7c0b1;
   --slate: #3e4b55;
+  --charcoal: #161612;
   --ink: #2a2f33;
   --ink-muted: #3f474c;
   --ink-soft: #6a7378;
+  --font-body: "Outfit", system-ui, sans-serif;
+  --font-signature: "Great Vibes", cursive;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-body);
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-signature: "Great Vibes", cursive;
 }
 
 .font-signature {
-  font-family: var(--font-signature), cursive;
+  font-family: "Great Vibes", cursive;
 }
 
 @layer base {
