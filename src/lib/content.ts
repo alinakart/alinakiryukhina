@@ -319,7 +319,6 @@ export const galleries = {
         images: [
           "/artwork/site/portraits/img-0526.jpg",
           "/artwork/site/portraits/img-0528.jpg",
-          "/artwork/site/portraits/blue-dress-sketch.jpg",
         ],
       },
       {
