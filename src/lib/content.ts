@@ -289,13 +289,9 @@ export const galleries = {
           "/artwork/site/portraits/mini-5.jpg",
           "/artwork/site/portraits/mini-1.jpg",
           "/artwork/site/portraits/mini-2.jpg",
-          "/artwork/site/portraits/mini-4.jpg",
-          "/artwork/site/portraits/mini-6.jpg",
+          "/artwork/site/portraits/mini-4-cropped.jpg",
+          "/artwork/site/portraits/mini-6-wide.jpg",
         ],
-      },
-      {
-        title: "Studio Portrait Session",
-        src: "/artwork/site/portraits/studio-portrait-session.jpg",
       },
       { title: "Academy Artwork 3", src: "/artwork/site/portraits/academy-3.jpg" },
       {
@@ -355,7 +351,7 @@ export const galleries = {
       },
       {
         title: "Still Life IV",
-        src: "/artwork/site/studies/still-life-iv.jpg",
+        src: "/artwork/site/studies/still-life-iv-user.jpg",
         layout: "landscape" as const,
       },
     ],
@@ -376,7 +372,19 @@ export const studiesSection = {
       title: "Two Figures",
       src: "/artwork/site/studies/two-figures.jpg",
     },
+    {
+      title: "Academy Artwork 3",
+      src: "/artwork/site/portraits/academy-3.jpg",
+    },
     { title: "Master Copy", src: "/artwork/site/studies/master-copy.jpg" },
+    {
+      title: "Rembrandt Study",
+      images: [
+        "/artwork/site/studies/rembrandt-copy.jpg",
+        "/artwork/site/studies/rembrandt-close-up.jpg",
+        "/artwork/site/studies/rembrandt-original.jpg",
+      ],
+    },
   ],
 } as const;
 
