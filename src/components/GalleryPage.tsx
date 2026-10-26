@@ -39,7 +39,7 @@ export function GalleryPage({ slug }: GalleryPageProps) {
     >
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <header className="mb-12 max-w-2xl md:mb-16">
-          <h1 className="mb-4 text-[0.88rem] font-semibold tracking-[0.22em] uppercase">
+          <h1 className="mb-4 whitespace-pre-line text-[0.88rem] font-semibold tracking-[0.22em] uppercase">
             {copy.title}
           </h1>
           <p

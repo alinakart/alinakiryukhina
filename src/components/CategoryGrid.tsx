@@ -30,7 +30,7 @@ export function CategoryGrid() {
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100" />
-            <h3 className="absolute inset-x-0 bottom-0 p-5 text-center text-[0.78rem] font-medium tracking-[0.2em] text-white uppercase md:text-[0.82rem]">
+            <h3 className="absolute inset-x-0 bottom-0 whitespace-pre-line p-5 text-center text-[0.78rem] font-medium tracking-[0.2em] text-white uppercase md:text-[0.82rem]">
               {labels[index] ?? category.label}
             </h3>
           </Link>
