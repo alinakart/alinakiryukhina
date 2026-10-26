@@ -52,8 +52,8 @@ export const categories = [
   {
     href: "/portraits",
     label: "Portrait Painting",
-    src: "/artwork/site/portraits/nastya-portrait.jpg",
-    alt: "Portrait painting sample",
+    src: "/artwork/site/portraits/mc-portrait.jpg",
+    alt: "Seated portrait painting",
   },
   {
     href: "/figurative",
@@ -76,57 +76,68 @@ export const intro = {
 
 export const featureLinks = [
   {
-    href: "https://www.1937china.com/kzgdata/clzl/ztzl/russia-art/",
     domain: "1937china.com",
     title: "俄罗斯胜利纪念馆 · 美术作品展",
     titleEn: "Russian Victory Memorial Museum — Art Exhibition",
     excerpt:
       "Exhibition of Russian art works presented through the Russian Victory Memorial Museum collection in China.",
-    image: "/artwork/site/figurative/war-art.jpg",
-    imageAlt: "Commemorative painting featured in Russian victory art exhibitions",
+    slides: [
+      {
+        href: "https://www.1937china.com/kzgdata/clzl/ztzl/russia-art/",
+        image: "/artwork/site/figurative/war-art.jpg",
+        imageAlt:
+          "Commemorative painting featured in Russian victory art exhibitions",
+      },
+    ],
   },
   {
-    href: "https://in.gallerix.ru/alinak",
     domain: "gallerix.ru",
     title: "Алина Кирюхина",
     titleEn: "Alina Kiryukhina on Gallerix",
     excerpt:
       "Artclub Gallerix profile — paintings, albums, exhibitions, and publications from Saint Petersburg.",
-    image: "/artwork/site/studies/still-life-1.jpg",
-    imageAlt: "Still life painting from Alina’s Gallerix portfolio",
+    slides: [
+      {
+        href: "https://in.gallerix.ru/alinak",
+        image: "/artwork/site/studies/still-life-1.jpg",
+        imageAlt: "Still life painting from Alina’s Gallerix portfolio",
+      },
+    ],
   },
   {
-    href: "https://beriozkagallery.ru/kiryukhinaalina",
     domain: "beriozkagallery.ru",
     title: "Кирюхина Алина",
     titleEn: "Alina Kiryukhina at Beriozka Gallery",
     excerpt:
       "Artist page at Beriozka Gallery — education, exhibitions, and the childhood memory behind Father.",
-    image: "/artwork/site/figurative/dad-artwork.jpg",
-    imageAlt: "Father — painting featured on the Beriozka Gallery artist page",
-  },
-] as const;
-
-export const featureDocuments = [
-  {
-    href: "https://1drv.ms/w/c/8ed1f8c72b37f09c/IQDKXHyb4v6VQJro5hW_8ip7AVMwM2vMYC9W553WdklP9mk?e=H4kTZa&nav=eyJoIjoiMTkxNzI2NzczMiJ9",
-    title: "Featured document I",
-    label: "OneDrive document",
+    slides: [
+      {
+        href: "https://beriozkagallery.ru/kiryukhinaalina",
+        image: "/artwork/site/figurative/dad-artwork.jpg",
+        imageAlt: "Father — painting featured on the Beriozka Gallery artist page",
+      },
+    ],
   },
   {
-    href: "https://1drv.ms/w/c/8ed1f8c72b37f09c/IQDKXHyb4v6VQJro5hW_8ip7AVMwM2vMYC9W553WdklP9mk?e=b6c0wd&nav=eyJoIjoiNTk5ODg2NTY1In0",
-    title: "Featured document II",
-    label: "OneDrive document",
-  },
-  {
-    href: "https://1drv.ms/w/c/8ed1f8c72b37f09c/IQDKXHyb4v6VQJro5hW_8ip7AVMwM2vMYC9W553WdklP9mk?e=x4rjGT&nav=eyJoIjoiMTE3MTQxNjg4NCJ9",
-    title: "Featured document III",
-    label: "OneDrive document",
-  },
-  {
-    href: "https://1drv.ms/w/c/8ed1f8c72b37f09c/IQDKXHyb4v6VQJro5hW_8ip7AVMwM2vMYC9W553WdklP9mk?e=V9eA7p&nav=eyJoIjoiMTc1NjIzNTczMSJ9",
-    title: "Featured document IV",
-    label: "OneDrive document",
+    domain: "academart.com",
+    title: "Kiryukhina A",
+    titleEn: "4th year study, Repin Academy — AcademArt",
+    excerpt:
+      "Academy studies from Alina’s fourth year at the I.E. Repin Institute, presented on AcademArt.",
+    slides: [
+      {
+        href: "https://academart.com/works/kiryukhina-a?from=%2Facademy%2F3520",
+        image: "/artwork/site/figurative/academart-figure-drawing.jpg",
+        imageAlt: "Academy figure drawing by Alina Kiryukhina on AcademArt",
+        objectPosition: "center 28%",
+      },
+      {
+        href: "https://academart.com/works/kiryukhina-a-4?from=%2Facademy%2F3520",
+        image: "/artwork/site/figurative/academart-green-portrait.jpg",
+        imageAlt: "Portrait of a girl on a green background by Alina Kiryukhina on AcademArt",
+        objectPosition: "center top",
+      },
+    ],
   },
 ] as const;
 
@@ -137,7 +148,7 @@ export const aboutTheWork = {
     "The finished work becomes a lasting record of that encounter — something with a life of its own, and a focal point for years to come.",
   ],
   href: "/about-the-work",
-  image: "/artwork/site/process/studio-session.jpg",
+  image: "/artwork/site/process/about-the-work-banner-3.jpg",
 };
 
 export const aboutAlina = {
@@ -272,11 +283,21 @@ export const galleries = {
           "/artwork/site/portraits/nastya-photo-2.jpg",
         ],
       },
-      { title: "Portrait Miniature I", src: "/artwork/site/portraits/mini-1.jpg" },
-      { title: "Portrait Miniature II", src: "/artwork/site/portraits/mini-2.jpg" },
-      { title: "Portrait Miniature III", src: "/artwork/site/portraits/mini-3.jpg" },
-      { title: "Portrait Miniature IV", src: "/artwork/site/portraits/mini-4.jpg" },
-      { title: "Portrait Miniature V", src: "/artwork/site/portraits/mini-5.jpg" },
+      {
+        title: "Portrait Miniatures",
+        images: [
+          "/artwork/site/portraits/mini-5.jpg",
+          "/artwork/site/portraits/mini-1.jpg",
+          "/artwork/site/portraits/mini-2.jpg",
+          "/artwork/site/portraits/mini-4.jpg",
+          "/artwork/site/portraits/mini-6.jpg",
+        ],
+      },
+      {
+        title: "Studio Portrait Session",
+        src: "/artwork/site/portraits/studio-portrait-session.jpg",
+      },
+      { title: "Academy Artwork 3", src: "/artwork/site/portraits/academy-3.jpg" },
       {
         title: "Family Portrait",
         images: [
@@ -285,34 +306,39 @@ export const galleries = {
         ],
       },
       {
-        title: "Studio Portrait Session",
-        src: "/artwork/site/portraits/studio-portrait-session.jpg",
-      },
-      {
         title: "Anton",
         images: [
           "/artwork/site/portraits/anton-artwork.jpg",
           "/artwork/site/portraits/anton-photo.jpg",
         ],
       },
-      { title: "Academy Artwork 3", src: "/artwork/site/portraits/academy-3.jpg" },
     ],
   },
   figurative: {
     title: "Figurative Painting",
     intro:
       "Narrative and figurative works exploring memory, place, and the human figure — from diploma pieces to exhibition paintings.",
+    quote:
+      "The work is a reflection on my childhood. My father always wore military uniform. We lived in a military settlement where you would see an old well and several Soviet-era Khrushchev apartment buildings. I wanted to convey the sensations and memories I experienced as a child: first snow, my Father, the Ural Mountains, and the cold.",
     works: [
-      { title: "Father", src: "/artwork/site/figurative/dad-artwork.jpg" },
-      { title: "Commemorative Group", src: "/artwork/site/figurative/war-art.jpg" },
-      { title: "Horseman", src: "/artwork/site/figurative/mehmet-sultan.jpg" },
-      { title: "Anton", src: "/artwork/site/figurative/anton-artwork.jpg" },
-      { title: "Exhibition Work", src: "/artwork/site/figurative/exhibited-2.jpg" },
-      { title: "Exhibition Work II", src: "/artwork/site/figurative/exhibited-7.jpg" },
-      { title: "Academy Work", src: "/artwork/site/figurative/academy-work.jpg" },
-      { title: "Academy Study", src: "/artwork/site/figurative/academy-2.jpg" },
-      { title: "Academy Study II", src: "/artwork/site/figurative/academy-3.jpg" },
-      { title: "Master Copy", src: "/artwork/site/figurative/master-copy.jpg" },
+      {
+        title: "Father",
+        images: [
+          "/artwork/site/figurative/dad-artwork.jpg",
+          "/artwork/site/figurative/father-exhibited.jpg",
+          "/artwork/site/figurative/father-with-alina-3.jpg",
+        ],
+      },
+      {
+        title: "On the Bridge",
+        images: [
+          "/artwork/site/figurative/bridge-with-alina.jpg",
+          "/artwork/site/figurative/railway-figures-2.jpg",
+          "/artwork/site/figurative/bridge-studio.jpg",
+          "/artwork/site/figurative/bridge-exhibited.jpg",
+          "/artwork/site/figurative/bridge-wrapped.jpg",
+        ],
+      },
     ],
   },
   studies: {

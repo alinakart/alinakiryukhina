@@ -1,0 +1,107 @@
+"use client";
+
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { heroSlides } from "@/lib/content";
+
+export function HeroCarousel() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setIndex((current) => (current + 1) % heroSlides.length);
+    }, 6000);
+    return () => window.clearInterval(timer);
+  }, []);
+
+  const go = (direction: -1 | 1) => {
+    setIndex((current) => {
+      const next = current + direction;
+      if (next < 0) return heroSlides.length - 1;
+      if (next >= heroSlides.length) return 0;
+      return next;
+    });
+  };
+
+  return (
+    <section className="relative h-[100svh] min-h-[32rem] w-full overflow-hidden bg-black">
+      {heroSlides.map((slide, slideIndex) => (
+        <div
+          key={slide.src}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-out ${
+            slideIndex === index ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Image
+            src={slide.src}
+            alt={slide.alt}
+            fill
+            priority={slideIndex === 0}
+            sizes="100vw"
+            className="object-cover"
+            style={
+              slide.objectPosition
+                ? { objectPosition: slide.objectPosition }
+                : undefined
+            }
+          />
+        </div>
+      ))}
+
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/20" />
+
+      <button
+        type="button"
+        aria-label="Previous slide"
+        onClick={() => go(-1)}
+        className="absolute top-1/2 left-3 z-10 -translate-y-1/2 p-3 text-white/90 transition-opacity hover:opacity-70 md:left-5"
+      >
+        <Chevron direction="left" />
+      </button>
+      <button
+        type="button"
+        aria-label="Next slide"
+        onClick={() => go(1)}
+        className="absolute top-1/2 right-3 z-10 -translate-y-1/2 p-3 text-white/90 transition-opacity hover:opacity-70 md:right-5"
+      >
+        <Chevron direction="right" />
+      </button>
+
+      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+        {heroSlides.map((slide, slideIndex) => (
+          <button
+            key={slide.src}
+            type="button"
+            aria-label={`Slide ${slideIndex + 1}`}
+            aria-current={slideIndex === index}
+            onClick={() => setIndex(slideIndex)}
+            className={`h-1.5 w-1.5 rounded-full transition-all ${
+              slideIndex === index ? "bg-white" : "bg-white/45 hover:bg-white/70"
+            }`}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Chevron({ direction }: { direction: "left" | "right" }) {
+  return (
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      aria-hidden="true"
+      className={direction === "left" ? "" : "rotate-180"}
+    >
+      <path
+        d="M17.5 6.5L10 14l7.5 7.5"
+        stroke="currentColor"
+        strokeWidth="1.25"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
