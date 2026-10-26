@@ -14,7 +14,7 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Alina" },
   { href: "/figurative", label: "Academic Training" },
-  { href: "/portraits", label: "Commissioned Portraits" },
+  { href: "/portraits", label: "Commissioned portraits and genre paintings" },
   { href: "/studies", label: "Still Life" },
   { href: "/about-the-work", label: "About the Work" },
   { href: "/feature", label: "Feature" },
@@ -53,7 +53,7 @@ export const heroSlides: {
 export const categories = [
   {
     href: "/portraits",
-    label: "Commissioned Portraits",
+    label: "Commissioned portraits and genre paintings",
     src: "/artwork/site/portraits/mc-portrait.jpg",
     alt: "Seated portrait painting",
   },
@@ -260,7 +260,7 @@ export const testimonials = [
 
 export const galleries = {
   portraits: {
-    title: "Commissioned Portraits",
+    title: "Commissioned portraits and genre paintings",
     intro:
       "Commissioned and studio portraits painted from life and reference, with attention to likeness, colour, and quiet presence.",
     works: [
@@ -345,9 +345,9 @@ export const galleries = {
   figurative: {
     title: "Academic Training",
     intro:
-      "Narrative and figurative works exploring memory, place, and the human figure — from diploma pieces to exhibition paintings.",
+      "Alina has gone through rigorous academic training in the only school in the world that preserved the centuries-old traditions of classical training for artists, the Repin Academy of Arts, Saint-Petersburg, Russia. She has not only acquired a deep understanding of shape and human anatomy, but of the craft of fine art displaying confident artistic expression.",
     quote:
-      "The work is a reflection on my childhood. My father always wore military uniform. We lived in a military settlement where you would see an old well and several Soviet-era Khrushchev apartment buildings. I wanted to convey the sensations and memories I experienced as a child: first snow, my Father, the Ural Mountains, and the cold.",
+      "My Diploma work is a reflection of my childhood. My father always wore a military uniform. We lived in a military settlement where you would see an old well and several Soviet-era Khrushchev apartment buildings. I wanted to convey the sensations and memories I experienced as a child: first snow, my Father, the Ural Mountains, and the cold.",
     works: [
       {
         title: "Together",
@@ -372,6 +372,11 @@ export const galleries = {
         ],
       },
     ],
+    diplomaVideo: {
+      title: "Dedication to Father",
+      src: "/artwork/site/figurative/dedication-to-father.mp4",
+      layout: "landscape" as const,
+    },
   },
   studies: {
     title: "Still Life",
@@ -380,8 +385,8 @@ export const galleries = {
       { title: "Still Life I", src: "/artwork/site/studies/still-life-1.jpg" },
       { title: "Still Life II", src: "/artwork/site/studies/still-life-2.jpg" },
       {
-        title: "Still Life III",
-        src: "/artwork/site/studies/still-life-iii.jpg",
+        title: "Still Life in Warm Tones",
+        src: "/artwork/site/studies/still-life-iii-warm.jpg",
         layout: "landscape" as const,
       },
       {

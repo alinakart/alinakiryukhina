@@ -6,7 +6,7 @@ export const dictionaries = {
       home: "Home",
       about: "About Alina",
       academic: "Academic Training",
-      portraits: "Commissioned Portraits",
+      portraits: "Commissioned portraits and genre paintings",
       stillLife: "Still Life",
       aboutWork: "About the Work",
       feature: "Feature",
@@ -35,7 +35,7 @@ export const dictionaries = {
       body: "Classically trained at the I.E. Repin Saint Petersburg Academy of Arts, Alina works in portraiture and figurative painting with a focus on atmosphere, memory, and the quiet weight of everyday human moments.",
     },
     categories: {
-      portraits: "Commissioned Portraits",
+      portraits: "Commissioned portraits and genre paintings",
       academic: "Academic Training",
       stillLife: "Still Life",
     },
@@ -114,7 +114,7 @@ export const dictionaries = {
       ],
     },
     portraits: {
-      title: "Commissioned Portraits",
+      title: "Commissioned portraits and genre paintings",
       intro:
         "Commissioned and studio portraits painted from life and reference, with attention to likeness, colour, and quiet presence.",
       works: {
@@ -132,14 +132,15 @@ export const dictionaries = {
     academic: {
       title: "Academic Training",
       intro:
-        "Narrative and figurative works exploring memory, place, and the human figure — from diploma pieces to exhibition paintings.",
+        "Alina has gone through rigorous academic training in the only school in the world that preserved the centuries-old traditions of classical training for artists, the Repin Academy of Arts, Saint-Petersburg, Russia. She has not only acquired a deep understanding of shape and human anatomy, but of the craft of fine art displaying confident artistic expression.",
       quote:
-        "The work is a reflection on my childhood. My father always wore military uniform. We lived in a military settlement where you would see an old well and several Soviet-era Khrushchev apartment buildings. I wanted to convey the sensations and memories I experienced as a child: first snow, my Father, the Ural Mountains, and the cold.",
-      diplomaHeading: "Alina's diploma work: Triptych “Dedication to Father”.",
+        "My Diploma work is a reflection of my childhood. My father always wore a military uniform. We lived in a military settlement where you would see an old well and several Soviet-era Khrushchev apartment buildings. I wanted to convey the sensations and memories I experienced as a child: first snow, my Father, the Ural Mountains, and the cold.",
+      diplomaHeading: "Alina's diploma work: Triptych “To My Father”.",
       works: {
         Together: "Together",
         "First Snow": "First Snow",
         Father: "Father",
+        "Dedication to Father": "Dedication to Father",
       },
       studiesTitle: "Studies",
       studiesIntro: "Academic studies and master copies.",
@@ -156,7 +157,7 @@ export const dictionaries = {
       works: {
         "Still Life I": "Still Life I",
         "Still Life II": "Still Life II",
-        "Still Life III": "Still Life III",
+        "Still Life in Warm Tones": "Still Life in Warm Tones",
         "Still Life IV": "Still Life IV",
       },
     },
@@ -224,7 +225,7 @@ export const dictionaries = {
       academic: "Академическое образование",
       portraits: "Портреты на заказ",
       stillLife: "Натюрморт",
-      aboutWork: "О работе",
+      aboutWork: "Процесс работы",
       feature: "Публикации",
       contact: "Контакты",
     },
@@ -256,7 +257,7 @@ export const dictionaries = {
       stillLife: "Натюрморт",
     },
     aboutTheWorkBand: {
-      heading: "О работе",
+      heading: "Процесс работы",
       paragraphs: [
         "Портрет — это совместный процесс\nмежду моделью и художником.",
         "Готовая работа становится живой памятью этой встречи —\nпроизведением со своей жизнью,\nи смысловым центром на долгие годы.",
@@ -281,7 +282,7 @@ export const dictionaries = {
     ],
     aboutAlina: {
       heading: "Об Алине",
-      lead: "Alina Kiryukhina — художник и живописец из Санкт-Петербурга, Россия.",
+      lead: "Алина Кирюхина — художник и живописец из Санкт-Петербурга, Россия.",
       paragraphs: [
         "Она училась в СХУ имени И.Д. Шадра в Екатеринбурге, Россия (художник-живописец; преподаватель, 2016) и в СПбГАИЖСА имени И.Е. Репина, Санкт-Петербург, Россия (художник-живописец, станковая живопись, 2022).",
         "Её практика включает портреты на заказ, фигуративную живопись, академические этюды и натюрморт. Она также преподаёт частным ученикам 8–40 лет и ведёт занятия в студии Global Art.",
@@ -347,14 +348,15 @@ export const dictionaries = {
     academic: {
       title: "Академическое образование",
       intro:
-        "Фигуративные и академические работы — от дипломных картин до выставочных полотен, исследующие память, место и человеческую фигуру.",
+        "Алина прошла серьёзную академическую подготовку в единственном в мире вузе, сохранившем многовековые традиции классического художественного образования — Академии художеств имени И.Е. Репина в Санкт-Петербурге. Она обрела не только глубокое понимание природы и анатомии человека, но и мастерство изобразительного искусства.",
       quote:
-        "Работа — это воспоминание о моём детстве. Отец всегда носил военную форму. Жили мы в военном городке, где рядом можно встретить и старый колодец, и несколько советских хрущёвок. Хотелось передать те мои ощущения из детства: первый снег, Отец, Урал и холод.",
+        "Моя дипломная работа — это воспоминание о детстве. Отец всегда носил военную форму. Жили мы в военном городке, где рядом можно встретить и старый колодец, и несколько советских хрущёвок. Хотелось передать те мои ощущения из детства: первый снег, Отец, Урал и холод.",
       diplomaHeading: "Дипломная работа Алины: Триптих «Посвящение Отцу».",
       works: {
         Together: "Двое",
         "First Snow": "Первый снег",
         Father: "Отец",
+        "Dedication to Father": "Посвящение Отцу",
       },
       studiesTitle: "Штудии, постановки, копии работ великих мастеров",
       studiesIntro: "",
@@ -371,12 +373,12 @@ export const dictionaries = {
       works: {
         "Still Life I": "Натюрморт I",
         "Still Life II": "Натюрморт II",
-        "Still Life III": "Натюрморт III",
+        "Still Life in Warm Tones": "Натюрморт в тёплой гамме",
         "Still Life IV": "Натюрморт IV",
       },
     },
     aboutWorkPage: {
-      title: "О работе",
+      title: "Процесс работы",
       paragraphs: [
         "Каждый заказ начинается с разговора — о модели, о месте и о том чувстве, которое должна нести картина. От первых набросков через цветовые этюды до готовой живописи процесс совместный и неторопливый.",
         "Алина по возможности работает с натуры, выстраивая сходство и атмосферу через сеансы позирования, референсы и классические методы, сформированные в Академии Репина.",
