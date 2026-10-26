@@ -43,7 +43,7 @@ export function SiteNav({ open, onClose }: SiteNavProps) {
         }`}
       />
       <aside
-        className={`absolute inset-y-0 right-0 flex w-full max-w-md flex-col bg-[var(--slate)] px-8 py-8 text-white shadow-2xl transition-transform duration-400 ease-out sm:px-10 ${
+        className={`absolute inset-y-0 right-0 flex w-full max-w-md flex-col bg-[var(--charcoal)] px-8 py-8 text-white shadow-2xl transition-transform duration-400 ease-out sm:px-10 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

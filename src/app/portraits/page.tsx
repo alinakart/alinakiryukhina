@@ -3,7 +3,7 @@ import { GalleryPage } from "@/components/GalleryPage";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Commissioned Portraits",
+  title: "Commissioned portraits and genre paintings",
 };
 
 export default function PortraitsPage() {

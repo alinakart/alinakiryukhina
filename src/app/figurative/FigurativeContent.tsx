@@ -27,7 +27,7 @@ export function FigurativeContent() {
   return (
     <main className="bg-[var(--sage)] pt-28 pb-20 md:pt-32">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <header className="mb-12 max-w-2xl md:mb-16">
+        <header className="mb-12 md:mb-16">
           <div className="mb-8 flex items-end gap-6 md:gap-8">
             <Image
               src="/artwork/site/figurative/repin-academy-logo.png"
@@ -47,10 +47,10 @@ export function FigurativeContent() {
           <h1 className="mb-4 text-[0.88rem] font-semibold tracking-[0.22em] text-[var(--ink)] uppercase">
             {t.academic.title}
           </h1>
-          <p className="text-[1rem] leading-8 text-[var(--ink-muted)]">
+          <p className="w-full text-[1rem] leading-8 text-[var(--ink-muted)]">
             {t.academic.intro}
           </p>
-          <p className="mt-6 text-[1rem] leading-8 text-[var(--ink-muted)]">
+          <p className="mt-6 w-full text-[1rem] leading-8 text-[var(--ink-muted)]">
             “{t.academic.quote}”
           </p>
         </header>
@@ -71,6 +71,18 @@ export function FigurativeContent() {
                 layout={workLayout(work as { layout?: string })}
               />
             ))}
+          </div>
+          <div className="mt-4">
+            <GalleryWorkCard
+              title={
+                t.academic.works[
+                  gallery.diplomaVideo
+                    .title as keyof typeof t.academic.works
+                ] ?? gallery.diplomaVideo.title
+              }
+              images={[gallery.diplomaVideo.src]}
+              layout={gallery.diplomaVideo.layout}
+            />
           </div>
         </section>
 
