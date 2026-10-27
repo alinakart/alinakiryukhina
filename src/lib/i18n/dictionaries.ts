@@ -357,7 +357,7 @@ export const dictionaries = {
         Together: "Двое",
         "First Snow": "Первый снег",
         Father: "Отец",
-        "To My Father": "Моему отцу",
+        "To My Father": "Посвящение Отцу",
       },
       studiesTitle: "Штудии, постановки, копии работ великих мастеров",
       studiesIntro: "",
