@@ -135,7 +135,7 @@ export const dictionaries = {
         "Alina has gone through rigorous academic training in the only school in the world that preserved the centuries-old traditions of classical training for artists, the Repin Academy of Arts, Saint-Petersburg, Russia. She has not only acquired a deep understanding of shape and human anatomy, but of the craft of fine art displaying confident artistic expression.",
       quote:
         "My Diploma work is a reflection of my childhood. My father always wore a military uniform. We lived in a military settlement where you would see an old well and several Soviet-era Khrushchev apartment buildings. I wanted to convey the sensations and memories I experienced as a child: first snow, my Father, the Ural Mountains, and the cold.",
-      diplomaHeading: "Alina's diploma work: Triptych “To My Father”.",
+      diplomaHeading: "Alina's Post-Graduate Diploma Project: Triptych “To My Father”.",
       works: {
         Together: "Together",
         "First Snow": "First Snow",
