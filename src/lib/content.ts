@@ -220,6 +220,7 @@ export const aboutAlina = {
     {
       src: "/artwork/site/about/exhibitions/alina-and-dad.jpg",
       alt: "Alina and her father with the Father painting",
+      objectPosition: "center top",
     },
     {
       src: "/artwork/site/about/exhibitions/diploma-covered.jpg",
