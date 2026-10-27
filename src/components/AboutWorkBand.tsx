@@ -19,7 +19,7 @@ export function AboutWorkBand() {
         priority
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/15" />
-      <div className="relative z-10 mx-auto flex min-h-[28rem] max-w-6xl flex-col items-end justify-end px-6 pt-12 pb-24 text-right text-white md:min-h-[34rem] md:px-10 md:pb-32">
+      <div className="relative z-10 mx-auto flex min-h-[28rem] max-w-6xl flex-col items-end justify-end px-6 pt-12 pb-12 text-right text-white md:min-h-[34rem] md:px-10 md:pb-16">
         <h2 className="mb-6 text-[0.82rem] font-semibold tracking-[0.22em] uppercase">
           {t.aboutTheWorkBand.heading}
         </h2>

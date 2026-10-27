@@ -35,7 +35,7 @@ export const dictionaries = {
       body: "Classically trained at the I.E. Repin Saint Petersburg Academy of Arts, Alina works in portraiture and figurative painting with a focus on atmosphere, memory, and the quiet weight of everyday human moments.",
     },
     categories: {
-      portraits: "Commissioned portraits and genre paintings",
+      portraits: "Commissioned portraits\nand genre paintings",
       academic: "Academic Training",
       stillLife: "Still Life",
     },
@@ -114,7 +114,7 @@ export const dictionaries = {
       ],
     },
     portraits: {
-      title: "Commissioned portraits and genre paintings",
+      title: "Commissioned portraits\nand genre paintings",
       intro:
         "Commissioned and studio portraits painted from life and reference, with attention to likeness, colour, and quiet presence.",
       works: {
