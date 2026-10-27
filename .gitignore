@@ -23,6 +23,12 @@
 # misc
 .DS_Store
 *.pem
+.tools/
+
+# local transcription scratch
+/public/artwork/site/figurative/dedication-to-father.wav
+/public/artwork/site/figurative/dedication-to-father.srt
+/public/artwork/site/figurative/dedication-to-father.vtt
 
 # debug
 npm-debug.log*

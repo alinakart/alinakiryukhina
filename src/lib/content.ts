@@ -372,8 +372,9 @@ export const galleries = {
       },
     ],
     diplomaVideo: {
-      title: "Dedication to Father",
+      title: "To My Father",
       src: "/artwork/site/figurative/dedication-to-father.mp4",
+      srcEn: "/artwork/site/figurative/dedication-to-father.en.mp4",
       layout: "landscape" as const,
     },
   },

@@ -3,10 +3,18 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
+type SubtitleTrack = {
+  src: string;
+  srcLang: string;
+  label: string;
+  default?: boolean;
+};
+
 type GalleryWorkCardProps = {
   title: string;
   images: string[];
   layout?: "portrait" | "landscape";
+  subtitleTracks?: SubtitleTrack[];
 };
 
 function isVideo(src: string) {
@@ -17,6 +25,7 @@ export function GalleryWorkCard({
   title,
   images,
   layout = "portrait",
+  subtitleTracks,
 }: GalleryWorkCardProps) {
   const [index, setIndex] = useState(0);
   const isCarousel = images.length > 1;
@@ -63,8 +72,20 @@ export function GalleryWorkCard({
             muted
             loop
             autoPlay
+            crossOrigin="anonymous"
             aria-label={mediaAlt(index)}
-          />
+          >
+            {subtitleTracks?.map((track) => (
+              <track
+                key={track.src}
+                kind="subtitles"
+                src={track.src}
+                srcLang={track.srcLang}
+                label={track.label}
+                default={track.default}
+              />
+            ))}
+          </video>
         ) : (
           <Image
             src={src}
@@ -76,7 +97,13 @@ export function GalleryWorkCard({
             priority
           />
         )}
-        <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] bg-gradient-to-t from-black/55 to-transparent p-4 text-[0.72rem] tracking-[0.14em] text-white uppercase opacity-0 transition-opacity duration-400 group-hover:opacity-100">
+        <figcaption
+          className={`pointer-events-none absolute bottom-0 left-0 z-[1] p-4 text-left text-[0.72rem] tracking-[0.14em] text-white uppercase ${
+            isVideo(src)
+              ? ""
+              : "inset-x-0 bg-gradient-to-t from-black/55 to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-100"
+          }`}
+        >
           {title}
         </figcaption>
         {isCarousel ? (

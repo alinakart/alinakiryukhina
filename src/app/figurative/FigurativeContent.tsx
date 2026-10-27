@@ -22,7 +22,7 @@ function workLayout(work: { layout?: string }): "portrait" | "landscape" {
 
 export function FigurativeContent() {
   const gallery = galleries.figurative;
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <main className="bg-[var(--sage)] pt-28 pb-20 md:pt-32">
@@ -80,8 +80,24 @@ export function FigurativeContent() {
                     .title as keyof typeof t.academic.works
                 ] ?? gallery.diplomaVideo.title
               }
-              images={[gallery.diplomaVideo.src]}
+              images={[
+                locale === "en"
+                  ? gallery.diplomaVideo.srcEn
+                  : gallery.diplomaVideo.src,
+              ]}
               layout={gallery.diplomaVideo.layout}
+              subtitleTracks={
+                locale === "en"
+                  ? [
+                      {
+                        src: "/artwork/site/figurative/dedication-to-father.en.vtt",
+                        srcLang: "en",
+                        label: "English",
+                        default: true,
+                      },
+                    ]
+                  : undefined
+              }
             />
           </div>
         </section>
