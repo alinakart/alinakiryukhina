@@ -233,6 +233,7 @@ export const aboutAlina = {
     {
       src: "/artwork/site/about/exhibitions/alina-and-diploma.jpg",
       alt: "Alina with large canvases in the academy studio",
+      objectPosition: "center 62%",
     },
     {
       src: "/artwork/site/about/exhibitions/art-prepped-to-ship.jpg",
