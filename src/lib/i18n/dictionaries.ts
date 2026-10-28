@@ -32,11 +32,13 @@ export const dictionaries = {
     },
     hero: {
       captions: {
-        dedicationToFather: "",
-        natalia: "",
-        fatherAndSon: "",
-        stillLifeFruit: "",
-        memory: "",
+        dedicationToFather:
+          "“To My Father”\n2022\n170×170\nOil on canvas",
+        natalia: "“Natalya”\n2024\n170×170\nOil on canvas",
+        fatherAndSon: "“Father and Son”\n2026\n180×180\nOil on canvas",
+        stillLifeFruit:
+          "“Still Life with Fruit”\n2024\n170×170\nOil on canvas",
+        memory: "“Memory”\n2023\n170×170\nOil on canvas",
       },
     },
     intro: {
