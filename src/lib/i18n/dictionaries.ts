@@ -30,6 +30,14 @@ export const dictionaries = {
     brand: {
       name: "Alina Kiryukhina",
     },
+    hero: {
+      captions: {
+        dedicationToFather: "",
+        natalia: "",
+        fatherAndSon: "",
+        stillLifeFruit: "",
+      },
+    },
     intro: {
       heading: "Alina Kiryukhina Artist & Painter",
       body: "Classically trained at the I.E. Repin Saint Petersburg Academy of Arts, Alina works in portraiture and figurative painting with a focus on atmosphere, memory, and the quiet weight of everyday human moments.",
@@ -246,6 +254,15 @@ export const dictionaries = {
     },
     brand: {
       name: "Alina Kiryukhina",
+    },
+    hero: {
+      captions: {
+        dedicationToFather:
+          "«Посвящение Отцу»\n2022 г.\n170х170\nХолст, масло",
+        natalia: "«Наталья»\n2024 г.\n170х170\nХолст, масло",
+        fatherAndSon: "«Отец и Сын»\n2026 г.\n180х180\nХолст, масло",
+        stillLifeFruit: "«Натюрморт с фруктами»\n2024 г.\n170х170\nХолст, масло",
+      },
     },
     intro: {
       heading: "Алина Кирюхина — Художник-Живописец",

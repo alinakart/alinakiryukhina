@@ -25,15 +25,18 @@ export const heroSlides: {
   src: string;
   alt: string;
   objectPosition?: string;
+  captionKey?: "dedicationToFather" | "natalia" | "fatherAndSon" | "stillLifeFruit";
 }[] = [
   {
     src: "/artwork/site/hero/dad-artwork.jpg",
     alt: "Figurative painting of a man drinking from a bucket in winter",
     objectPosition: "center top",
+    captionKey: "dedicationToFather",
   },
   {
     src: "/artwork/site/hero/mc-portrait.jpg",
     alt: "Seated portrait with red tapestry and pomegranates",
+    captionKey: "natalia",
   },
   {
     src: "/artwork/site/hero/war-art.jpg",
@@ -43,10 +46,12 @@ export const heroSlides: {
     src: "/artwork/site/hero/anton-artwork.jpg",
     alt: "Anton’s artwork — two figures resting in a grassy landscape",
     objectPosition: "center 48%",
+    captionKey: "fatherAndSon",
   },
   {
     src: "/artwork/site/hero/still-life.jpg",
     alt: "Classical still life with fruit and glassware",
+    captionKey: "stillLifeFruit",
   },
 ];
 

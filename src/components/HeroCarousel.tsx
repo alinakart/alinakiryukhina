@@ -3,9 +3,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { heroSlides } from "@/lib/content";
+import { useLanguage } from "./LanguageProvider";
 
 export function HeroCarousel() {
   const [index, setIndex] = useState(0);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -22,6 +24,12 @@ export function HeroCarousel() {
       return next;
     });
   };
+
+  const activeSlide = heroSlides[index];
+  const caption =
+    activeSlide?.captionKey != null
+      ? t.hero.captions[activeSlide.captionKey]
+      : "";
 
   return (
     <section className="relative h-[100svh] min-h-[32rem] w-full overflow-hidden bg-black">
@@ -49,6 +57,12 @@ export function HeroCarousel() {
       ))}
 
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/20" />
+
+      {caption ? (
+        <div className="pointer-events-none absolute right-5 bottom-16 z-10 max-w-xs whitespace-pre-line text-right text-[0.78rem] leading-6 tracking-[0.06em] text-white/95 md:right-8 md:bottom-20 md:text-[0.88rem] md:leading-7">
+          {caption}
+        </div>
+      ) : null}
 
       <button
         type="button"
