@@ -36,6 +36,7 @@ export const dictionaries = {
         natalia: "",
         fatherAndSon: "",
         stillLifeFruit: "",
+        memory: "",
       },
     },
     intro: {
@@ -262,6 +263,7 @@ export const dictionaries = {
         natalia: "«Наталья»\n2024 г.\n170х170\nХолст, масло",
         fatherAndSon: "«Отец и Сын»\n2026 г.\n180х180\nХолст, масло",
         stillLifeFruit: "«Натюрморт с фруктами»\n2024 г.\n170х170\nХолст, масло",
+        memory: "«Память»\n2023 г.\n170х170\nХолст, масло",
       },
     },
     intro: {

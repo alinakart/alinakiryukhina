@@ -25,7 +25,12 @@ export const heroSlides: {
   src: string;
   alt: string;
   objectPosition?: string;
-  captionKey?: "dedicationToFather" | "natalia" | "fatherAndSon" | "stillLifeFruit";
+  captionKey?:
+    | "dedicationToFather"
+    | "natalia"
+    | "fatherAndSon"
+    | "stillLifeFruit"
+    | "memory";
 }[] = [
   {
     src: "/artwork/site/hero/dad-artwork.jpg",
@@ -41,6 +46,7 @@ export const heroSlides: {
   {
     src: "/artwork/site/hero/war-art.jpg",
     alt: "Figurative commemorative painting with veterans and children",
+    captionKey: "memory",
   },
   {
     src: "/artwork/site/hero/anton-artwork.jpg",
