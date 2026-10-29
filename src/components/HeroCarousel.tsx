@@ -1,31 +1,44 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { heroSlides } from "@/lib/content";
 import { useLanguage } from "./LanguageProvider";
 
 export function HeroCarousel() {
   const [index, setIndex] = useState(0);
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
+
+  const slides = useMemo(
+    () =>
+      heroSlides.filter(
+        (slide) => !slide.locales || slide.locales.includes(locale),
+      ),
+    [locale],
+  );
 
   useEffect(() => {
+    setIndex(0);
+  }, [locale]);
+
+  useEffect(() => {
+    if (slides.length < 2) return;
     const timer = window.setInterval(() => {
-      setIndex((current) => (current + 1) % heroSlides.length);
+      setIndex((current) => (current + 1) % slides.length);
     }, 6000);
     return () => window.clearInterval(timer);
-  }, []);
+  }, [slides.length]);
 
   const go = (direction: -1 | 1) => {
     setIndex((current) => {
       const next = current + direction;
-      if (next < 0) return heroSlides.length - 1;
-      if (next >= heroSlides.length) return 0;
+      if (next < 0) return slides.length - 1;
+      if (next >= slides.length) return 0;
       return next;
     });
   };
 
-  const activeSlide = heroSlides[index];
+  const activeSlide = slides[index];
   const caption =
     activeSlide?.captionKey != null
       ? t.hero.captions[activeSlide.captionKey]
@@ -33,7 +46,7 @@ export function HeroCarousel() {
 
   return (
     <section className="relative h-[100svh] min-h-[32rem] w-full overflow-hidden bg-black">
-      {heroSlides.map((slide, slideIndex) => (
+      {slides.map((slide, slideIndex) => (
         <div
           key={slide.src}
           className={`absolute inset-0 transition-opacity duration-1000 ease-out ${
@@ -64,37 +77,43 @@ export function HeroCarousel() {
         </div>
       ) : null}
 
-      <button
-        type="button"
-        aria-label="Previous slide"
-        onClick={() => go(-1)}
-        className="absolute top-1/2 left-3 z-10 -translate-y-1/2 p-3 text-white/90 transition-opacity hover:opacity-70 md:left-5"
-      >
-        <Chevron direction="left" />
-      </button>
-      <button
-        type="button"
-        aria-label="Next slide"
-        onClick={() => go(1)}
-        className="absolute top-1/2 right-3 z-10 -translate-y-1/2 p-3 text-white/90 transition-opacity hover:opacity-70 md:right-5"
-      >
-        <Chevron direction="right" />
-      </button>
-
-      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 gap-2">
-        {heroSlides.map((slide, slideIndex) => (
+      {slides.length > 1 ? (
+        <>
           <button
-            key={slide.src}
             type="button"
-            aria-label={`Slide ${slideIndex + 1}`}
-            aria-current={slideIndex === index}
-            onClick={() => setIndex(slideIndex)}
-            className={`h-1.5 w-1.5 rounded-full transition-all ${
-              slideIndex === index ? "bg-white" : "bg-white/45 hover:bg-white/70"
-            }`}
-          />
-        ))}
-      </div>
+            aria-label="Previous slide"
+            onClick={() => go(-1)}
+            className="absolute top-1/2 left-3 z-10 -translate-y-1/2 p-3 text-white/90 transition-opacity hover:opacity-70 md:left-5"
+          >
+            <Chevron direction="left" />
+          </button>
+          <button
+            type="button"
+            aria-label="Next slide"
+            onClick={() => go(1)}
+            className="absolute top-1/2 right-3 z-10 -translate-y-1/2 p-3 text-white/90 transition-opacity hover:opacity-70 md:right-5"
+          >
+            <Chevron direction="right" />
+          </button>
+
+          <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+            {slides.map((slide, slideIndex) => (
+              <button
+                key={slide.src}
+                type="button"
+                aria-label={`Slide ${slideIndex + 1}`}
+                aria-current={slideIndex === index}
+                onClick={() => setIndex(slideIndex)}
+                className={`h-1.5 w-1.5 rounded-full transition-all ${
+                  slideIndex === index
+                    ? "bg-white"
+                    : "bg-white/45 hover:bg-white/70"
+                }`}
+              />
+            ))}
+          </div>
+        </>
+      ) : null}
     </section>
   );
 }

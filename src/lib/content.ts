@@ -31,6 +31,7 @@ export const heroSlides: {
     | "fatherAndSon"
     | "stillLifeFruit"
     | "memory";
+  locales?: readonly ("en" | "ru")[];
 }[] = [
   {
     src: "/artwork/site/hero/dad-artwork.jpg",
@@ -47,6 +48,7 @@ export const heroSlides: {
     src: "/artwork/site/hero/war-art.jpg",
     alt: "Figurative commemorative painting with veterans and children",
     captionKey: "memory",
+    locales: ["ru"],
   },
   {
     src: "/artwork/site/hero/anton-artwork.jpg",
