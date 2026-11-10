@@ -302,7 +302,6 @@ export const galleries = {
         images: [
           "/artwork/site/portraits/nastya-portrait-2.jpg",
           "/artwork/site/portraits/nastya-portrait.jpg",
-          "/artwork/site/portraits/nastya-photo-2.jpg",
         ],
       },
       {
