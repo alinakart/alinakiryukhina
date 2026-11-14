@@ -42,7 +42,7 @@ export const dictionaries = {
       },
     },
     intro: {
-      heading: "Alina Kiryukhina Artist & Painter",
+      heading: "Alina Key Artist & Painter",
       body: "Classically trained at the I.E. Repin Saint Petersburg Academy of Arts, Alina works in portraiture and figurative painting with a focus on atmosphere, memory, and the quiet weight of everyday human moments.",
     },
     categories: {
@@ -76,7 +76,7 @@ export const dictionaries = {
     ],
     aboutAlina: {
       heading: "About Alina",
-      lead: "Alina Kiryukhina is a fine artist and painter based in Saint Petersburg, Russia.",
+      lead: "Alina Key is a fine artist and painter based in Saint Petersburg, Russia.",
       paragraphs: [
         "She trained at the I.D. Shadr Sverdlovsk Art College in Yekaterinburg, Russia (Fine Artist, Painting; Teacher, 2016) and at the I.E. Repin Saint Petersburg Academy of Arts, Russia (Fine Artist, Easel Painting, 2022).",
         "Her practice spans commissioned portraits, figurative painting, academic studies, and still life. She also teaches private students aged 8–40 and instructs at Global Art Studio.",
@@ -202,8 +202,8 @@ export const dictionaries = {
       titlesEn: {
         "1937china.com":
           "Russian Victory Memorial Museum — Art Exhibition",
-        "gallerix.ru": "Alina Kiryukhina on Gallerix",
-        "beriozkagallery.ru": "Alina Kiryukhina at Beriozka Gallery",
+        "gallerix.ru": "Alina Key on Gallerix",
+        "beriozkagallery.ru": "Alina Key at Beriozka Gallery",
       },
       academArt: {
         titleEn: "4th year study, Repin Academy — AcademArt",
@@ -227,7 +227,7 @@ export const dictionaries = {
       tagline: "Artist & Painter",
       location: "Saint Petersburg, Russia",
       description:
-        "Fine artist and painter Alina Kiryukhina — portraits, figurative painting, and studies grounded in classical training from the Repin Academy of Arts.",
+        "Fine artist and painter Alina Key — portraits, figurative painting, and studies grounded in classical training from the Repin Academy of Arts.",
     },
   },
   ru: {

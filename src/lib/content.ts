@@ -1,13 +1,13 @@
 export const site = {
-  name: "Alina Kiryukhina",
-  title: "Alina Kiryukhina | Artist & Painter",
+  name: "Alina Key",
+  title: "Alina Key | Artist & Painter",
   tagline: "Artist & Painter",
   email: "alina.kiryukhina.art@gmail.com",
   phone: "+7 996 778-10-39",
   location: "Saint Petersburg, Russia",
   instagram: "https://www.instagram.com/",
   description:
-    "Fine artist and painter Alina Kiryukhina — portraits, figurative painting, and studies grounded in classical training from the Repin Academy of Arts.",
+    "Fine artist and painter Alina Key — portraits, figurative painting, and studies grounded in classical training from the Repin Academy of Arts.",
 };
 
 export const navLinks = [
@@ -85,7 +85,7 @@ export const categories = [
 ];
 
 export const intro = {
-  heading: "Alina Kiryukhina Artist & Painter",
+  heading: "Alina Key Artist & Painter",
   body: "Classically trained at the I.E. Repin Saint Petersburg Academy of Arts, Alina works in portraiture and figurative painting with a focus on atmosphere, memory, and the quiet weight of everyday human moments.",
 };
 
@@ -108,7 +108,7 @@ export const featureLinks = [
   {
     domain: "gallerix.ru",
     title: "Алина Кирюхина",
-    titleEn: "Alina Kiryukhina on Gallerix",
+    titleEn: "Alina Key on Gallerix",
     excerpt:
       "Artclub Gallerix profile — paintings, albums, exhibitions, and publications from Saint Petersburg.",
     slides: [
@@ -122,7 +122,7 @@ export const featureLinks = [
   {
     domain: "beriozkagallery.ru",
     title: "Кирюхина Алина",
-    titleEn: "Alina Kiryukhina at Beriozka Gallery",
+    titleEn: "Alina Key at Beriozka Gallery",
     excerpt:
       "Artist page at Beriozka Gallery — education, exhibitions, and the childhood memory behind Father.",
     slides: [
@@ -145,14 +145,14 @@ export const academArtFeature = {
     {
       href: "https://academart.com/works/kiryukhina-a?from=%2Facademy%2F3520",
       image: "/artwork/site/figurative/academart-figure-drawing.jpg",
-      imageAlt: "Academy figure drawing by Alina Kiryukhina on AcademArt",
+      imageAlt: "Academy figure drawing by Alina Key on AcademArt",
       objectPosition: "center 28%",
     },
     {
       href: "https://academart.com/works/kiryukhina-a-4?from=%2Facademy%2F3520",
       image: "/artwork/site/figurative/academart-green-portrait.jpg",
       imageAlt:
-        "Portrait of a girl on a green background by Alina Kiryukhina on AcademArt",
+        "Portrait of a girl on a green background by Alina Key on AcademArt",
       objectPosition: "center top",
     },
   ],
@@ -170,7 +170,7 @@ export const aboutTheWork = {
 
 export const aboutAlina = {
   heading: "About Alina",
-  lead: "Alina Kiryukhina is a fine artist and painter based in Saint Petersburg, Russia.",
+  lead: "Alina Key is a fine artist and painter based in Saint Petersburg, Russia.",
   paragraphs: [
     "She trained at the I.D. Shadr Sverdlovsk Art College in Yekaterinburg, Russia (Fine Artist, Painting; Teacher, 2016) and at the I.E. Repin Saint Petersburg Academy of Arts, Russia (Fine Artist, Easel Painting, 2022).",
     "Her practice spans commissioned portraits, figurative painting, academic studies, and still life. She also teaches private students aged 8–40 and instructs at Global Art Studio.",
@@ -241,7 +241,7 @@ export const aboutAlina = {
     },
     {
       src: "/artwork/site/about/exhibitions/art-exhibited-plate.jpg",
-      alt: "Exhibition wall label for Alina Kiryukhina",
+      alt: "Exhibition wall label for Alina Key",
     },
     {
       src: "/artwork/site/about/exhibitions/alina-and-diploma.jpg",

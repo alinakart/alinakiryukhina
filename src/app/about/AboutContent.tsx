@@ -26,7 +26,7 @@ export function AboutContent() {
 
           <div className="flex flex-col justify-center">
             <p className="font-signature mb-4 text-[2.8rem] leading-none text-[var(--ink)] md:text-[3.2rem]">
-              Alina Kiryukhina
+              {t.brand.name}
             </p>
             <h1 className="mb-6 text-[0.88rem] font-semibold tracking-[0.22em] text-[var(--ink)] uppercase">
               {a.heading}

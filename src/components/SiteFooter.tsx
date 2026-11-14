@@ -58,7 +58,7 @@ export function SiteFooter() {
 
       <div className="mx-auto mt-12 flex max-w-6xl flex-col gap-3 border-t border-white/10 pt-6 text-[0.68rem] text-white/65 md:flex-row md:justify-between">
         <p>{t.ui.privacy}</p>
-        <p>© 2026 {site.name}</p>
+        <p>© 2026 {t.brand.name}</p>
       </div>
     </footer>
   );
