@@ -28,7 +28,7 @@ export const dictionaries = {
       langRu: "RU",
     },
     brand: {
-      name: "Alina Kiryukhina",
+      name: "Alina Key",
     },
     hero: {
       captions: {
@@ -257,7 +257,7 @@ export const dictionaries = {
       langRu: "РУ",
     },
     brand: {
-      name: "Alina Kiryukhina",
+      name: "Alina Key",
     },
     hero: {
       captions: {

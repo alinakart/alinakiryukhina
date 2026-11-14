@@ -39,7 +39,7 @@ export function SiteFooter() {
 
         <div className="md:text-right">
           <p className="font-signature text-[2.4rem] leading-none md:text-[2.8rem]">
-            Alina Kiryukhina
+            {t.brand.name}
           </p>
           <a
             href={`mailto:${site.email}`}

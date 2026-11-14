@@ -41,7 +41,7 @@ export function SiteHeader({ tone = "light" }: SiteHeaderProps) {
             href="/"
             className={`font-signature text-[2.1rem] leading-none transition-opacity hover:opacity-80 md:text-[2.5rem] ${ink}`}
           >
-            Alina Kiryukhina
+            {t.brand.name}
           </Link>
           <div className="flex items-center gap-4 md:gap-5">
             <div
