@@ -28,6 +28,8 @@ export function GalleryPage({ slug }: GalleryPageProps) {
   const isPortraits = slug === "portraits";
   const copy = isPortraits ? t.portraits : t.stillLife;
   const workTitles = isPortraits ? t.portraits.works : t.stillLife.works;
+  const miniaturesWorks =
+    isPortraits && "miniaturesWorks" in gallery ? gallery.miniaturesWorks : null;
 
   return (
     <main
@@ -65,6 +67,29 @@ export function GalleryPage({ slug }: GalleryPageProps) {
             );
           })}
         </div>
+
+        {miniaturesWorks ? (
+          <section className="mt-16 md:mt-20">
+            <h2 className="mb-6 text-[0.82rem] font-semibold tracking-[0.2em] uppercase md:mb-8">
+              {t.portraits.miniaturesTitle}
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {miniaturesWorks.map((work) => {
+                const translated =
+                  workTitles[work.title as keyof typeof workTitles] ??
+                  work.title;
+                return (
+                  <GalleryWorkCard
+                    key={work.title}
+                    title={translated}
+                    images={workImages(work)}
+                    layout={workLayout(work as { layout?: string })}
+                  />
+                );
+              })}
+            </div>
+          </section>
+        ) : null}
       </div>
     </main>
   );

@@ -298,23 +298,6 @@ export const galleries = {
         ],
       },
       {
-        title: "Anastasia",
-        images: [
-          "/artwork/site/portraits/nastya-portrait-2.jpg",
-          "/artwork/site/portraits/nastya-portrait.jpg",
-        ],
-      },
-      {
-        title: "Portrait Miniatures",
-        images: [
-          "/artwork/site/portraits/mini-5.jpg",
-          "/artwork/site/portraits/mini-1.jpg",
-          "/artwork/site/portraits/mini-2.jpg",
-          "/artwork/site/portraits/mini-4-cropped.jpg",
-          "/artwork/site/portraits/mini-6-wide.jpg",
-        ],
-      },
-      {
         title: "Alexander's Mother",
         images: [
           "/artwork/site/portraits/sasha-mom.jpg",
@@ -351,6 +334,25 @@ export const galleries = {
           "/artwork/site/portraits/mehmet-melisa-studio.jpg",
           "/artwork/site/portraits/mehmet-melisa-framing.jpg",
           "/artwork/site/portraits/mehmet-melisa-photo.jpg",
+        ],
+      },
+    ],
+    miniaturesWorks: [
+      {
+        title: "Portrait Miniatures",
+        images: [
+          "/artwork/site/portraits/mini-5.jpg",
+          "/artwork/site/portraits/mini-1.jpg",
+          "/artwork/site/portraits/mini-2.jpg",
+          "/artwork/site/portraits/mini-4-cropped.jpg",
+          "/artwork/site/portraits/mini-6-wide.jpg",
+        ],
+      },
+      {
+        title: "Anastasia",
+        images: [
+          "/artwork/site/portraits/nastya-portrait-2.jpg",
+          "/artwork/site/portraits/nastya-portrait.jpg",
         ],
       },
     ],

@@ -128,6 +128,7 @@ export const dictionaries = {
       title: "Commissioned portraits\nand genre paintings",
       intro:
         "Commissioned and studio portraits painted from life and reference, with attention to likeness, colour, and quiet presence.",
+      miniaturesTitle: "Portrait miniatures",
       works: {
         Natalia: "Natalia",
         Mehmet: "Mehmet",
@@ -355,6 +356,7 @@ export const dictionaries = {
       title: "Портреты и Жанровые картины\nна заказ",
       intro:
         "Портреты и жанровые картины, написанные Алиной на заказ с натуры и по референсу с вниманием к сходству, цвету и атмосфере.",
+      miniaturesTitle: "Портретные миниатюры",
       works: {
         Natalia: "Наталия",
         Mehmet: "Мехмет",
