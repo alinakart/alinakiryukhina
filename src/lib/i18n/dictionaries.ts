@@ -34,6 +34,7 @@ export const dictionaries = {
       captions: {
         dedicationToFather:
           "“To My Father”\n2022\n170×170\nOil on canvas",
+        together: "“Together”\n2015\nOil on canvas",
         natalia: "“Natalya”\n2024\n170×170\nOil on canvas",
         fatherAndSon: "“Father and Son”\n2026\n180×180\nOil on canvas",
         stillLifeFruit:
@@ -263,6 +264,7 @@ export const dictionaries = {
       captions: {
         dedicationToFather:
           "«Посвящение Отцу»\n2022 г.\n170х170\nХолст, масло",
+        together: "«Двое»\n2015 г.\nХолст, масло",
         natalia: "«Наталья»\n2024 г.\n170х170\nХолст, масло",
         fatherAndSon: "«Отец и Сын»\n2026 г.\n180х180\nХолст, масло",
         stillLifeFruit: "«Натюрморт с фруктами»\n2024 г.\n170х170\nХолст, масло",

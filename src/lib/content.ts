@@ -27,6 +27,7 @@ export const heroSlides: {
   objectPosition?: string;
   captionKey?:
     | "dedicationToFather"
+    | "together"
     | "natalia"
     | "fatherAndSon"
     | "stillLifeFruit"
@@ -34,15 +35,22 @@ export const heroSlides: {
   locales?: readonly ("en" | "ru")[];
 }[] = [
   {
+    src: "/artwork/site/hero/mc-portrait.jpg",
+    alt: "Seated portrait with red tapestry and pomegranates",
+    captionKey: "natalia",
+  },
+  {
     src: "/artwork/site/hero/dad-artwork.jpg",
     alt: "Figurative painting of a man drinking from a bucket in winter",
     objectPosition: "center top",
     captionKey: "dedicationToFather",
+    locales: ["ru"],
   },
   {
-    src: "/artwork/site/hero/mc-portrait.jpg",
-    alt: "Seated portrait with red tapestry and pomegranates",
-    captionKey: "natalia",
+    src: "/artwork/site/hero/ural-bridge-exhibited.jpg",
+    alt: "Figurative painting of a couple on a railway bridge overlooking industrial tracks",
+    captionKey: "together",
+    locales: ["en"],
   },
   {
     src: "/artwork/site/hero/war-art.jpg",
