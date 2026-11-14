@@ -315,6 +315,13 @@ export const galleries = {
         ],
       },
       {
+        title: "Alexander's Mother",
+        images: [
+          "/artwork/site/portraits/sasha-mom.jpg",
+          "/artwork/site/portraits/sasha-mom-photo.jpg",
+        ],
+      },
+      {
         title: "Anton and his Father",
         images: [
           "/artwork/site/portraits/anton-artwork.jpg",
